@@ -14,6 +14,7 @@ namespace File_Extensions_Add_or_Change
         string textBoxedFilled { get; set; }
 
         string FilePathOfSelectedFiles { get; set; }
+        List<string> filePathOfAllFiles = new List<string>();
 
          static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
@@ -24,22 +25,25 @@ namespace File_Extensions_Add_or_Change
         {
             FilePathOfSelectedFiles = str;
 
+            filePathOfAllFiles.Add(FilePathOfSelectedFiles);
+
         }
 
         public void StartTheChange()
         {
-            
             try
             {
-                foreach (string file in selectedFileNames)
+                
+                for (int i = 0; i < selectedFileNames.Count; i++)
                 {
-
-                    File.Move(FilePathOfSelectedFiles, FilePathOfSelectedFiles + extensionName, true);
-                  
-                  // File.Copy(file, file + extensionName, true);
-                        form1.listView3.Items.Add(file + extensionName);
-                        File.Delete(file);
+                    form1.listView4.Items.Add(selectedFileNames[i]);
+                   // FileInfo fs = new FileInfo(filePathOfAllFiles[i]);
+                    File.Move(filePathOfAllFiles[i], filePathOfAllFiles[i] + extensionName, true);
+                    form1.listView3.Items.Add(selectedFileNames[i] + extensionName);
                 }
+
+
+
             }
             catch (Exception ex)
             {
