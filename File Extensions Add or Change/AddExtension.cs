@@ -91,11 +91,14 @@ namespace File_Extensions_Add_or_Change
         public void DiableTheButtons()
         {
             form1.radioButton1.Enabled = false;
+            form1.radioButton1.Checked = false;
             form1.radioButton2.Enabled = false;
+            form1.radioButton2.Checked = false;
             form1.textBox1.Enabled = false;
             form1.textBox1.Clear();
             form1.comboBox1.Enabled = false;
             form1.comboBox1.Items.Clear();
+            form1.button2.Enabled = false;
         }
 
         public void ClearTheScreen()
