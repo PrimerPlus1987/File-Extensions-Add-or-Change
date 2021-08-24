@@ -13,7 +13,7 @@ namespace File_Extensions_Add_or_Change
         string[] preSetList = {".jpeg", ".jpg", ".mp3", ".bat", ".html", ".docx", ".txt", ".pdf", ".png" };
         string textBoxFilled = "";
 
-        Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
+        static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
         public DropBoxPreDefined()
         {

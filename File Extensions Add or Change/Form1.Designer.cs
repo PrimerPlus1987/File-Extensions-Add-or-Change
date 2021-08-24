@@ -51,7 +51,7 @@ namespace File_Extensions_Add_or_Change
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(22, 79);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 92);
             this.button1.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace File_Extensions_Add_or_Change
             this.listView1.Enabled = false;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(269, 79);
-            this.listView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listView1.Margin = new System.Windows.Forms.Padding(6);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(372, 319);
             this.listView1.TabIndex = 1;
@@ -75,8 +75,8 @@ namespace File_Extensions_Add_or_Change
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(709, 757);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioButton1.Location = new System.Drawing.Point(667, 757);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(6);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(306, 36);
             this.radioButton1.TabIndex = 2;
@@ -89,8 +89,8 @@ namespace File_Extensions_Add_or_Change
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(1033, 757);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioButton2.Location = new System.Drawing.Point(975, 757);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(6);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(263, 36);
             this.radioButton2.TabIndex = 3;
@@ -104,8 +104,8 @@ namespace File_Extensions_Add_or_Change
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(975, 902);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox1.Location = new System.Drawing.Point(930, 911);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(221, 40);
             this.comboBox1.TabIndex = 4;
@@ -113,8 +113,8 @@ namespace File_Extensions_Add_or_Change
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(975, 838);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Location = new System.Drawing.Point(914, 838);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(182, 39);
             this.textBox1.TabIndex = 5;
@@ -123,7 +123,7 @@ namespace File_Extensions_Add_or_Change
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(709, 838);
+            this.label1.Location = new System.Drawing.Point(667, 838);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(235, 32);
@@ -133,7 +133,7 @@ namespace File_Extensions_Add_or_Change
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(709, 919);
+            this.label2.Location = new System.Drawing.Point(667, 919);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(251, 32);
@@ -145,7 +145,7 @@ namespace File_Extensions_Add_or_Change
             this.listView2.Enabled = false;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(774, 79);
-            this.listView2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listView2.Margin = new System.Windows.Forms.Padding(6);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(372, 614);
             this.listView2.TabIndex = 8;
@@ -181,7 +181,7 @@ namespace File_Extensions_Add_or_Change
             // 
             this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(269, 838);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(375, 113);
             this.button2.TabIndex = 11;
@@ -192,7 +192,7 @@ namespace File_Extensions_Add_or_Change
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(269, 1033);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(375, 105);
             this.button3.TabIndex = 12;
@@ -204,10 +204,10 @@ namespace File_Extensions_Add_or_Change
             // 
             this.listView3.Enabled = false;
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(1291, 79);
-            this.listView3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listView3.Location = new System.Drawing.Point(1235, 79);
+            this.listView3.Margin = new System.Windows.Forms.Padding(6);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(372, 1026);
+            this.listView3.Size = new System.Drawing.Size(552, 1026);
             this.listView3.TabIndex = 13;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.List;
@@ -237,7 +237,7 @@ namespace File_Extensions_Add_or_Change
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1688, 1184);
+            this.ClientSize = new System.Drawing.Size(1819, 1184);
             this.Controls.Add(this.listView4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.listView3);
@@ -255,7 +255,7 @@ namespace File_Extensions_Add_or_Change
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -266,8 +266,6 @@ namespace File_Extensions_Add_or_Change
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -282,6 +280,8 @@ namespace File_Extensions_Add_or_Change
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.ListView listView3;
         public System.Windows.Forms.ListView listView4;
+        public System.Windows.Forms.RadioButton radioButton1;
+        public System.Windows.Forms.RadioButton radioButton2;
     }
 }
 

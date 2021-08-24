@@ -11,6 +11,7 @@ namespace File_Extensions_Add_or_Change
         public List<string> namesOfFiles = new List<string>();
 
         AddExtension AddExtension = new AddExtension();
+        DropBoxPreDefined dropBoxPreDefined = new DropBoxPreDefined();
 
         public Form1()
         {
@@ -24,14 +25,13 @@ namespace File_Extensions_Add_or_Change
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dr = openFileDialog1.ShowDialog();
+            //Select Files Button
 
-         
+            DialogResult dr = openFileDialog1.ShowDialog();
+            AddExtension.ClearTheScreen();
+
             if (dr == DialogResult.OK)
             {
-                listView1.Items.Clear();
-                AddExtension.ClearTheScreen();
-
                 foreach (string file in openFileDialog1.FileNames)
                 {
                     string pathName = Path.GetFullPath(file);
@@ -65,8 +65,6 @@ namespace File_Extensions_Add_or_Change
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            DropBoxPreDefined dropBoxPreDefined = new DropBoxPreDefined();
-
             if (radioButton2.Checked)
             {
                 comboBox1.Enabled = true;
@@ -96,6 +94,7 @@ namespace File_Extensions_Add_or_Change
             //start button
 
             AddExtension.StartTheChange();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -12,15 +12,14 @@ namespace File_Extensions_Add_or_Change
     {
         string extensionName { get; set; }
         string textBoxedFilled { get; set; }
-
         string FilePathOfSelectedFiles { get; set; }
+
         List<string> filePathOfAllFiles = new List<string>();
-
-         static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
-
-
         List<string> selectedFileNames = new List<string>();
 
+        static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
+
+        
         public void ThisIsTheFIlePathOfFiles(string str)
         {
             FilePathOfSelectedFiles = str;
@@ -33,7 +32,8 @@ namespace File_Extensions_Add_or_Change
         {
             try
             {
-                
+                DiableTheButtons();
+
                 for (int i = 0; i < selectedFileNames.Count; i++)
                 {
                     form1.listView4.Items.Add(selectedFileNames[i]);
@@ -41,9 +41,7 @@ namespace File_Extensions_Add_or_Change
                     File.Move(filePathOfAllFiles[i], filePathOfAllFiles[i] + extensionName, true);
                     form1.listView3.Items.Add(selectedFileNames[i] + extensionName);
                 }
-
-
-
+                filePathOfAllFiles.Clear();
             }
             catch (Exception ex)
             {
@@ -90,10 +88,23 @@ namespace File_Extensions_Add_or_Change
             }
         }
 
+        public void DiableTheButtons()
+        {
+            form1.radioButton1.Enabled = false;
+            form1.radioButton2.Enabled = false;
+            form1.textBox1.Enabled = false;
+            form1.textBox1.Clear();
+            form1.comboBox1.Enabled = false;
+            form1.comboBox1.Items.Clear();
+        }
+
         public void ClearTheScreen()
         {
+            filePathOfAllFiles.Clear();
             selectedFileNames.Clear();
+            form1.listView1.Items.Clear();
             form1.listView2.Items.Clear();
+            form1.listView3.Items.Clear();
         }
 
     }
