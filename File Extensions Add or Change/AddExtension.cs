@@ -50,8 +50,6 @@ namespace File_Extensions_Add_or_Change
         }
 
 
-
-
         List<string> CheckFileNameExtension()
         {
             List<string> altered = new List<string>();
@@ -64,7 +62,7 @@ namespace File_Extensions_Add_or_Change
                     MessageBox.Show("The index of the '.' is " + index);
                     StringBuilder sb = new StringBuilder(selectedFileNames[i]);
 
-                    sb.Remove(index, selectedFileNames[i].Length);
+                    sb.Remove(index, selectedFileNames[i].Length - index);
                    
                     altered.Add(sb.ToString());
 
