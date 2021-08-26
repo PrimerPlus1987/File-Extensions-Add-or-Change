@@ -23,9 +23,9 @@ namespace File_Extensions_Add_or_Change
         {
             //Select Files Button
 
-            DialogResult dr = openFileDialog1.ShowDialog();
+            DialogResult dr = openFileDialog1.ShowDialog(); //Opens file Selection box
             
-            AddExtension.ClearTheScreen();
+            AddExtension.ClearTheScreen(); //Clears all non important screens and empties lists
 
             if (dr == DialogResult.OK)
             {
