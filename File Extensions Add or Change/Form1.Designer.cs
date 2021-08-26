@@ -213,10 +213,10 @@ namespace File_Extensions_Add_or_Change
             // 
             this.listView4.Enabled = false;
             this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(706, 367);
+            this.listView4.Location = new System.Drawing.Point(690, 357);
             this.listView4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(243, 178);
+            this.listView4.Size = new System.Drawing.Size(243, 188);
             this.listView4.TabIndex = 15;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.List;
@@ -224,11 +224,11 @@ namespace File_Extensions_Add_or_Change
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(739, 351);
+            this.label6.Location = new System.Drawing.Point(699, 341);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 15);
+            this.label6.Size = new System.Drawing.Size(224, 15);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Current List of all Files changed";
+            this.label6.Text = "Current List of all Files that were changed";
             // 
             // label7
             // 
