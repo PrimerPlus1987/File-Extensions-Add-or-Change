@@ -41,10 +41,13 @@ namespace File_Extensions_Add_or_Change
                     // FileInfo fs = new FileInfo(filePathOfAllFiles[i]);
                     //  File.Move(FilePathOfSelectedFiles, FilePathOfSelectedFiles + extensionName, true);
                     //File.Move(FilePathOfSelectedFiles + "\\" + selectedFileNames[i], FilePathOfSelectedFiles + "\\" + selectedFileNames[i] + extensionName, true);
+
                     File.Move(FullPathOfAllFiles[i], FilePathOfSelectedFiles + "\\" + selectedFileNames[i] + extensionName, true);
                     form1.listView3.Items.Add(selectedFileNames[i] + extensionName);
                 }
                 FullPathOfAllFiles.Clear();
+                selectedFileNames.Clear();
+                
             }
             catch (Exception ex)
             {
@@ -53,7 +56,7 @@ namespace File_Extensions_Add_or_Change
         }
 
 
-        List<string> CheckFileNameExtension()
+       public List<string> CheckFileNameExtension()
         {
             List<string> altered = new List<string>();
 

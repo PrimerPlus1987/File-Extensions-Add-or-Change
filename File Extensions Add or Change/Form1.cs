@@ -11,23 +11,20 @@ namespace File_Extensions_Add_or_Change
         public List<string> namesOfFiles = new List<string>();
 
         AddExtension AddExtension = new AddExtension();
-        DropBoxPreDefined dropBoxPreDefined = new DropBoxPreDefined();
+        DropBoxPreDefined DropBoxPreDefined = new DropBoxPreDefined();
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void InitializeOpenFileDialog()
-        {
-            openFileDialog1.Filter = "All Files";
-            openFileDialog1.Multiselect = true;
-        }
+    
         private void button1_Click(object sender, EventArgs e)
         {
             //Select Files Button
 
             DialogResult dr = openFileDialog1.ShowDialog();
+            
             AddExtension.ClearTheScreen();
 
             if (dr == DialogResult.OK)
@@ -39,12 +36,13 @@ namespace File_Extensions_Add_or_Change
                     string fileFullPath = Path.GetFullPath(file);
                     string pathName = Path.GetDirectoryName(fileFullPath);
                     AddExtension.ThisIsTheFIlePathOfFiles(pathName, fileFullPath);
-                    MessageBox.Show("Current directory of " + fileNames + " is " + pathName);
+                   // MessageBox.Show("Current directory of " + fileNames + " is " + pathName);
                     
                     listView1.Items.Add(fileNames);
                     namesOfFiles.Add(fileNames);
                 }
             }
+            openFileDialog1.FileName = "";
 
             radioButton1.Enabled = true;
             radioButton2.Enabled = true;
@@ -71,33 +69,44 @@ namespace File_Extensions_Add_or_Change
             if (radioButton2.Checked)
             {
                 comboBox1.Enabled = true;
-                dropBoxPreDefined.FillComboBox();
+                AddExtension.NameOfFIles(namesOfFiles);
+                DropBoxPreDefined.FillComboBox();
                 button2.Enabled = false;
             }
 
             else
             {
                 comboBox1.Enabled = false;
-                dropBoxPreDefined.ClearComboBox();
+                DropBoxPreDefined.ClearComboBox();
             }
             
         }
+
+       
         private void Enter(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //AddExtension.ExtensionAddition(textBoxFilled);
-               // AddExtension.CheckTheString();
                 AddExtension.ExtensionAddition(AddExtension.CheckTheString());
             }
         }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex > -1)
+            {
+                string selectedComboBoxExt = comboBox1.SelectedItem.ToString();
+                DropBoxPreDefined.CurrentInstanceOfAddExtension(AddExtension);
 
+                DropBoxPreDefined.SelectedDropBoxExtension(selectedComboBoxExt);
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             //start button
 
             AddExtension.StartTheChange();
-            
+            namesOfFiles.Clear();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -106,5 +115,7 @@ namespace File_Extensions_Add_or_Change
 
             this.Close();
         }
+
+       
     }
 }
