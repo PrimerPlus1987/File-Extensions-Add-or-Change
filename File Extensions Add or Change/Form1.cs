@@ -35,7 +35,7 @@ namespace File_Extensions_Add_or_Change
                     string fileNames = Path.GetFileName(file);
                     string fileFullPath = Path.GetFullPath(file);
                     string pathName = Path.GetDirectoryName(fileFullPath);
-                    AddExtension.ThisIsTheFIlePathOfFiles(pathName, fileFullPath);
+                    AddExtension.ThisIsTheFIlePathOfFiles(pathName, fileFullPath, fileNames);
                    // MessageBox.Show("Current directory of " + fileNames + " is " + pathName);
                     
                     listView1.Items.Add(fileNames);

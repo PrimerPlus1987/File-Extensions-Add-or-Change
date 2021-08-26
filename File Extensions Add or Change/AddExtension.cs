@@ -16,15 +16,16 @@ namespace File_Extensions_Add_or_Change
 
         List<string> FullPathOfAllFiles = new List<string>();
         List<string> selectedFileNames = new List<string>();
+        List<string> ViewAllChangedFiles = new List<string>();
 
         static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
         
-        public void ThisIsTheFIlePathOfFiles(string dirName, string fulllPath)
+        public void ThisIsTheFIlePathOfFiles(string dirName, string fulllPath, string fileNameWithExtOnly)
         {
             FilePathOfSelectedFiles = dirName;
             FullPathOfAllFiles.Add(fulllPath);
-
+            ViewAllChangedFiles.Add(fileNameWithExtOnly);
           //  filePathOfAllFiles.Add(FilePathOfSelectedFiles);
 
         }
@@ -37,10 +38,7 @@ namespace File_Extensions_Add_or_Change
 
                 for (int i = 0; i < selectedFileNames.Count; i++)
                 {
-                    form1.listView4.Items.Add(selectedFileNames[i]);
-                    // FileInfo fs = new FileInfo(filePathOfAllFiles[i]);
-                    //  File.Move(FilePathOfSelectedFiles, FilePathOfSelectedFiles + extensionName, true);
-                    //File.Move(FilePathOfSelectedFiles + "\\" + selectedFileNames[i], FilePathOfSelectedFiles + "\\" + selectedFileNames[i] + extensionName, true);
+                    form1.listView4.Items.Add(ViewAllChangedFiles[i]); //update listview with all files changed
 
                     File.Move(FullPathOfAllFiles[i], FilePathOfSelectedFiles + "\\" + selectedFileNames[i] + extensionName, true);
                     form1.listView3.Items.Add(selectedFileNames[i] + extensionName);
@@ -92,13 +90,14 @@ namespace File_Extensions_Add_or_Change
             CheckFileNameExtension();
 
             textBoxedFilled = '.' + form1.textBox1.Text;
-
+           
             //need to remove the '.' from text box
             // need to auto enter the '.'
             //if extension is unusual need to ask if that is what whas wanted
 
             
-            if (textBoxedFilled.IndexOf('.') == 0)
+            //if (textBoxedFilled.IndexOf('.') == 0)
+            if(textBoxedFilled[1] == '.')
             {
                 StringBuilder sb = new StringBuilder(textBoxedFilled);
                 sb.Remove(0, 1); //This will remove one character starting at index 1 of the string
