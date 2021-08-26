@@ -10,22 +10,22 @@ namespace File_Extensions_Add_or_Change
 {
     class DropBoxPreDefined
     {
-        string[] preSetList = {".jpeg", ".jpg", ".mp3", ".bat", ".html", ".docx", ".txt", ".pdf", ".png" };
+        string[] preSetList = {".jpeg", ".jpg", ".mp3", ".bat", ".html", ".docx", ".txt", ".pdf", ".png" }; //Predefined ComboBox Items
 
-        static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
-        List<string> FixedFileNames = new List<string>();
+        static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault(); //Keeps current instance of Form1 so 
+                                                                                                         //able to use items from it without starting new
+      
+        AddExtension AddExtension { get; set; } //Holds the current instance of the class AddExtension
 
-        AddExtension AddExtension { get; set; }
-
-        public void FillComboBox()
+        public void FillComboBox() //Method to fill combobox with prefilled list
         {
-            foreach (string str in preSetList)
+            foreach (string str in preSetList) //Loops through the preSetList to add to ComboBox
             {
                 form1.comboBox1.Items.Add(str);
             }
         }
 
-        public void CurrentInstanceOfAddExtension(AddExtension addExtension)
+        public void CurrentInstanceOfAddExtension(AddExtension addExtension) //Passes the currentinstance of AddExtension class to be used
         {
             AddExtension = addExtension;
         }
@@ -34,12 +34,12 @@ namespace File_Extensions_Add_or_Change
             AddExtension.CheckFileNameExtension(); //First because using current instance of AddExtension so the current list of 
                                                    // FileNames in the class AddExtension is current and is needed for
                                                    //the second method call ExtensionAddition
-            AddExtension.ExtensionAddition(str);
+            AddExtension.ExtensionAddition(str); //Call Method and pass it the chosen item from the comboBox
             form1.button2.Enabled = true;
   
         }
 
-        public void ClearComboBox()
+        public void ClearComboBox() //Clear the selected item so the combobox is not display any value
         {
             form1.comboBox1.Items.Clear();
         }
