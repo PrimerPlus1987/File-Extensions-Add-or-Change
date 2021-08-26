@@ -264,7 +264,7 @@ namespace File_Extensions_Add_or_Change
             this.Controls.Add(this.button1);
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Add Or Change Extension Name";
             this.ResumeLayout(false);
             this.PerformLayout();
 
