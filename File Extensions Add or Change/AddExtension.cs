@@ -14,17 +14,18 @@ namespace File_Extensions_Add_or_Change
         string textBoxedFilled { get; set; }
         string FilePathOfSelectedFiles { get; set; }
 
-        List<string> filePathOfAllFiles = new List<string>();
+        List<string> FullPathOfAllFiles = new List<string>();
         List<string> selectedFileNames = new List<string>();
 
         static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
         
-        public void ThisIsTheFIlePathOfFiles(string str)
+        public void ThisIsTheFIlePathOfFiles(string dirName, string fulllPath)
         {
-            FilePathOfSelectedFiles = str;
+            FilePathOfSelectedFiles = dirName;
+            FullPathOfAllFiles.Add(fulllPath);
 
-            filePathOfAllFiles.Add(FilePathOfSelectedFiles);
+          //  filePathOfAllFiles.Add(FilePathOfSelectedFiles);
 
         }
 
@@ -37,11 +38,13 @@ namespace File_Extensions_Add_or_Change
                 for (int i = 0; i < selectedFileNames.Count; i++)
                 {
                     form1.listView4.Items.Add(selectedFileNames[i]);
-                   // FileInfo fs = new FileInfo(filePathOfAllFiles[i]);
-                    File.Move(filePathOfAllFiles[i], filePathOfAllFiles[i] + extensionName, true);
+                    // FileInfo fs = new FileInfo(filePathOfAllFiles[i]);
+                    //  File.Move(FilePathOfSelectedFiles, FilePathOfSelectedFiles + extensionName, true);
+                    //File.Move(FilePathOfSelectedFiles + "\\" + selectedFileNames[i], FilePathOfSelectedFiles + "\\" + selectedFileNames[i] + extensionName, true);
+                    File.Move(FullPathOfAllFiles[i], FilePathOfSelectedFiles + "\\" + selectedFileNames[i] + extensionName, true);
                     form1.listView3.Items.Add(selectedFileNames[i] + extensionName);
                 }
-                filePathOfAllFiles.Clear();
+                FullPathOfAllFiles.Clear();
             }
             catch (Exception ex)
             {
@@ -59,15 +62,15 @@ namespace File_Extensions_Add_or_Change
                 if(selectedFileNames[i].Contains("."))
                 {
                     int index = selectedFileNames[i].IndexOf(".");
-                    MessageBox.Show("The index of the '.' is " + index);
+                   // MessageBox.Show("The index of the '.' is " + index);
                     StringBuilder sb = new StringBuilder(selectedFileNames[i]);
 
                     sb.Remove(index, selectedFileNames[i].Length - index);
                    
                     altered.Add(sb.ToString());
 
-                    MessageBox.Show("The altered filename is: " + selectedFileNames[i]);
-                    MessageBox.Show("For altered List: " + altered[i]);
+                  //  MessageBox.Show("The altered filename is: " + selectedFileNames[i]);
+                   // MessageBox.Show("For altered List: " + altered[i]);
                 }
                 else
                 {
@@ -147,7 +150,7 @@ namespace File_Extensions_Add_or_Change
 
         public void ClearTheScreen()
         {
-            filePathOfAllFiles.Clear();
+            FullPathOfAllFiles.Clear();
             selectedFileNames.Clear();
             form1.listView1.Items.Clear();
             form1.listView2.Items.Clear();

@@ -34,12 +34,15 @@ namespace File_Extensions_Add_or_Change
             {
                 foreach (string file in openFileDialog1.FileNames)
                 {
-                    string pathName = Path.GetFullPath(file);
-                    AddExtension.ThisIsTheFIlePathOfFiles(pathName);
-
-                    string fileName = Path.GetFileName(file);
-                    listView1.Items.Add(fileName);
-                    namesOfFiles.Add(fileName);
+                    // string pathName = Path.GetFullPath(file);
+                    string fileNames = Path.GetFileName(file);
+                    string fileFullPath = Path.GetFullPath(file);
+                    string pathName = Path.GetDirectoryName(fileFullPath);
+                    AddExtension.ThisIsTheFIlePathOfFiles(pathName, fileFullPath);
+                    MessageBox.Show("Current directory of " + fileNames + " is " + pathName);
+                    
+                    listView1.Items.Add(fileNames);
+                    namesOfFiles.Add(fileNames);
                 }
             }
 
