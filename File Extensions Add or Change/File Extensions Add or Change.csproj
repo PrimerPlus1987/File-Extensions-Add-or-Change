@@ -5,6 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>File_Extensions_Add_or_Change</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>editdocument_16x_hdq_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
