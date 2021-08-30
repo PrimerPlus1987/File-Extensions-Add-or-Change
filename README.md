@@ -19,7 +19,7 @@ How to use this program.
 
 If downloading the zip file.
 
-1) Download and run the setup file
+1) Download the Zip file and extract it. Then click and run the setup.exe file
 2) Allow the publisher not verified warning
 3) A shortcut should be installed on your desktop called, File Extensions Add or Change
 4) The app should open. If not you can click on the shortcut or double click the File Extensions Add or Change.exe
