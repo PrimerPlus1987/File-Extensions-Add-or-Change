@@ -24,6 +24,7 @@ If downloading the zip file.
 3) A shortcut should be installed on your desktop called, File Extensions Add or Change
 4) The app should open. If not you can click on the shortcut or double click the File Extensions Add or Change.exe
 5) In the app 
+6) 
       a. Click the Select Files Button
       
       b. Choose your files you want to change the extension of and click open or press enter.
@@ -35,17 +36,27 @@ If downloading the zip file.
       Manual Extension
       
       e. If chose to give it a Manual extension name type it in the box that is now highlighted. Your name must have a . first in the name. Example:  .jpeg
+      
       f. Now press enter and in the Preview extension rename wndow it will show you what the file extension rename will look like and the Start button will activate.
+      
       g. If you are ready to start the rename process just click Start
+      
       h. The Completed extension rename window will show you the completed rename of the files. 
+      
       i. There is a window that will show you all the files you have renamed if you do multiple different renames so you have a list to see.
       
       Select From Dropbox
+      
       j. If you want to use an option from the dropbox just click the Radio Button that says Select from dropbox
+      
       k. Choose your desired extension
+      
       l. Then in the Preview extension rename wndow it will show you what the file extension rename will look like and the Start button will activate.
+      
       m. If you are ready to start the rename process just click Start
+      
       n. The Completed extension rename window will show you the completed rename of the files. 
+      
       o. There is a window that will show you all the files you have renamed if you do multiple different renames so you have a list to see.
       
  That is it and you can click Exit to close the program or click Select Files to do more file extension renames if you need.
