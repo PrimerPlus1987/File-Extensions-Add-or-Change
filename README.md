@@ -33,7 +33,7 @@ If downloading the zip file.
       
       d. Now in the little circle radio buttons choose if you want to give it a name of your own choice OR select one that is in the dropbox. 
       
-   **   Manual Extension**
+   **Manual Extension**
       
       e. If chose to give it a Manual extension name type it in the box that is now highlighted. Your name must have a . first in the name. Example:  .jpeg
       
