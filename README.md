@@ -25,8 +25,11 @@ If downloading the zip file.
 4) The app should open. If not you can click on the shortcut or double click the File Extensions Add or Change.exe
 5) In the app 
       a. Click the Select Files Button
+      
       b. Choose your files you want to change the extension of and click open or press enter.
+      
       c. In the window it will show you the file(s) you selected
+      
       d. Now in the little circle radio buttons choose if you want to give it a name of your own choice OR select one that is in the dropbox. 
       
       Manual Extension
