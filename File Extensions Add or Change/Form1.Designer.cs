@@ -63,7 +63,6 @@ namespace File_Extensions_Add_or_Change
             // 
             // listView1
             // 
-            this.listView1.Enabled = false;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(145, 37);
             this.listView1.Name = "listView1";
@@ -138,7 +137,6 @@ namespace File_Extensions_Add_or_Change
             // 
             // listView2
             // 
-            this.listView2.Enabled = false;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(403, 37);
             this.listView2.Name = "listView2";
@@ -192,7 +190,6 @@ namespace File_Extensions_Add_or_Change
             // 
             // listView3
             // 
-            this.listView3.Enabled = false;
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(690, 37);
             this.listView3.Name = "listView3";
@@ -212,7 +209,6 @@ namespace File_Extensions_Add_or_Change
             // 
             // listView4
             // 
-            this.listView4.Enabled = false;
             this.listView4.HideSelection = false;
             this.listView4.Location = new System.Drawing.Point(690, 357);
             this.listView4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
