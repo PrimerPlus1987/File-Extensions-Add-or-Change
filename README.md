@@ -19,41 +19,41 @@ How to use this program.
 
 If downloading the zip file.
 
-1) Download the Zip file and extract it. Then click and run the setup.exe file
-2) Allow the publisher not verified warning
-3) A shortcut should be installed on your desktop called, File Extensions Add or Change
+1) Download the Zip file and extract it. Then click and run the setup.exe file.
+2) Allow the publisher not verified warning.
+3) A shortcut should be installed on your desktop called, File Extensions Add or Change.
 4) The app should open. If not you can click on the shortcut or double click the File Extensions Add or Change.exe
-5) In the app 
-6) 
-      a. Click the Select Files Button
+5) Now in the app 
+ 
+      a. Click the Select Files Button.
       
       b. Choose your files you want to change the extension of and click open or press enter.
       
-      c. In the window it will show you the file(s) you selected
+      c. In the window it will show you the file(s) you selected.
       
       d. Now in the little circle radio buttons choose if you want to give it a name of your own choice OR select one that is in the dropbox. 
       
    **Manual Extension**
       
-      e. If chose to give it a Manual extension name type it in the box that is now highlighted. Your name must have a . first in the name. Example:  .jpeg
+      e. If you chose to give it a manual extension name type it in the box that is now highlighted. Your name must have a '.' first in the name. Example:  .jpeg
       
-      f. Now press enter and in the Preview extension rename wndow it will show you what the file extension rename will look like and the Start button will activate.
+      f. Now press enter and in the preview extension rename window it will show you what the file extension rename will look like and the Start button will activate.
       
-      g. If you are ready to start the rename process just click Start
+      g. If you are ready to start the rename process just click Start.
       
-      h. The Completed extension rename window will show you the completed rename of the files. 
+      h. The completed extension rename window will show you the completed rename of the files. 
       
       i. There is a window that will show you all the files you have renamed if you do multiple different renames so you have a list to see.
       
       **Select From Dropbox**
       
-      j. If you want to use an option from the dropbox just click the Radio Button that says Select from dropbox
+      j. If you want to use an option from the dropbox just click the radio button that says Select from dropbox.
       
       k. Choose your desired extension
       
       l. Then in the Preview extension rename wndow it will show you what the file extension rename will look like and the Start button will activate.
       
-      m. If you are ready to start the rename process just click Start
+      m. If you are ready to start the rename process just click Start.
       
       n. The Completed extension rename window will show you the completed rename of the files. 
       
