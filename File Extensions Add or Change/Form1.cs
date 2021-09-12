@@ -22,11 +22,12 @@ namespace File_Extensions_Add_or_Change
         private void button1_Click(object sender, EventArgs e)
         {
             //Select Files Button
+            AddExtension.DisableTheButtons();
+            AddExtension.ClearTheScreen(); //Clears all non important screens and empties lists
 
             DialogResult dr = openFileDialog1.ShowDialog(); //Opens file Selection box
             
-            AddExtension.ClearTheScreen(); //Clears all non important screens and empties lists
-
+           
             if (dr == DialogResult.OK)
             {
                 foreach (string file in openFileDialog1.FileNames)

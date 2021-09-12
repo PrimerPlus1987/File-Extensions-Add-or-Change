@@ -88,27 +88,33 @@ namespace File_Extensions_Add_or_Change
         public string CheckTheString() //Checks if the user input follows the rules
         {
             CheckFileNameExtension(); //Call method to check the file name extension
-
-            textBoxedFilled = '.' + form1.textBox1.Text; //Add a "." just to be sure there is one included if the file has no "."
-
-            if(textBoxedFilled[1] == '.') //IF there is a "." in the 2nd position (index 1) of the string the do the following
+            try
             {
-                StringBuilder sb = new StringBuilder(textBoxedFilled); //Create an instance of the stringbuilder for textBoxedFilled string
+                textBoxedFilled = '.' + form1.textBox1.Text; //Add a "." just to be sure there is one included if the file has no "."
 
-                sb.Remove(0, 1); //This will remove one character starting at index 0 of the string
-                                 //Becaues if in this if statement then there must be 2 occurrences of "."
+                if (textBoxedFilled[1] == '.') //IF there is a "." in the 2nd position (index 1) of the string the do the following
+                {
+                    StringBuilder sb = new StringBuilder(textBoxedFilled); //Create an instance of the stringbuilder for textBoxedFilled string
 
-                textBoxedFilled = sb.ToString(); //Take new string and send to string textBoxedFIlled
+                    sb.Remove(0, 1); //This will remove one character starting at index 0 of the string
+                                     //Becaues if in this if statement then there must be 2 occurrences of "."
 
-                form1.button2.Enabled = true; //Activate the button2 (Start Button)
-              
-                return textBoxedFilled; //Send back the new string
+                    textBoxedFilled = sb.ToString(); //Take new string and send to string textBoxedFIlled
+
+                    form1.button2.Enabled = true; //Activate the button2 (Start Button)
+
+                    return textBoxedFilled; //Send back the new string
+                }
+
+                else //Check if the user entered a ".", if not send a warning
+                {
+                    MessageBox.Show("You must use a '.' before declaring your extension.");
+                    form1.textBox1.Clear(); //Erase what the user entered to start over
+                }
             }
-
-            else //Check if the user entered a ".", if not send a warning
+            catch
             {
-                MessageBox.Show("You must use a '.' before declaring your extension.");
-                form1.textBox1.Clear(); //Erase what the user entered to start over
+                MessageBox.Show("You must enter an extension.");
             }
 
             return ""; //Return an empty string if wrong input was entered
@@ -151,6 +157,8 @@ namespace File_Extensions_Add_or_Change
         {
             FullPathOfAllFiles.Clear();
             selectedFileNames.Clear();
+            ViewAllChangedFiles.Clear();
+            form1.namesOfFiles.Clear(); //Clear list of names incase of changing the selected files
             form1.listView1.Items.Clear();
             form1.listView2.Items.Clear();
             form1.listView3.Items.Clear();
