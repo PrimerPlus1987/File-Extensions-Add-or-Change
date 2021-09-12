@@ -75,11 +75,12 @@ If downloading the zip file.
 
 
 
+**********************************************************************************************************************************************************
 
+To remove from computer just open Apps & Features and in the search box type in File Extension Add or Change and click uninstall.
 
-
-      
-      
+**To get to Apps & Features just click on Windows Start button 
+** Type Apps & Features and press enter
       
       
       
