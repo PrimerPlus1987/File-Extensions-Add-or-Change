@@ -8,11 +8,11 @@ using System.IO;
 
 namespace File_Extensions_Add_or_Change
 {
-    class DropBoxPreDefined
+    class DropBoxPreDefined 
     {
         string[] preSetList = {".jpeg", ".jpg", ".mp3", ".bat", ".html", ".docx", ".txt", ".pdf", ".png" }; //Predefined ComboBox Items
 
-        static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault(); //Keeps current instance of Form1 so 
+        static Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault(); //Keeps current instance of Form1 so 
                                                                                                          //able to use items from it without starting new
       
         AddExtension AddExtension { get; set; } //Holds the current instance of the class AddExtension

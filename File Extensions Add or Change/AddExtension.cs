@@ -10,15 +10,15 @@ namespace File_Extensions_Add_or_Change
 {
     class AddExtension
     {
-        string extensionName { get; set; } //Gets the Extension that was typed in or selected from dropbox
-        string textBoxedFilled { get; set; } //Gets the user input from textbox
-        string FilePathOfSelectedFiles { get; set; } //Gets the File Path of selected Files
+        string extensionName;
+        string textBoxedFilled;
+        string FilePathOfSelectedFiles;
 
         List<string> FullPathOfAllFiles = new List<string>(); //Holds all Path and file names of all selected files
         List<string> selectedFileNames = new List<string>(); //Holds the File names
         List<string> ViewAllChangedFiles = new List<string>(); //Holds file names and extensions
 
-        static Form1 form1 = System.Windows.Forms.Application.OpenForms.OfType<Form1>().FirstOrDefault(); //Holds current instance of Form1 so able to  
+        static Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault(); //Holds current instance of Form1 so able to  
                                                                                                           //use items from it without starting new
 
         
