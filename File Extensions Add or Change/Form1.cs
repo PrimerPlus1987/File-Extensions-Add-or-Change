@@ -10,7 +10,6 @@ namespace File_Extensions_Add_or_Change
         
         public List<string> namesOfFiles = new List<string>();
 
-        AddExtension AddExtension = new AddExtension(); //Creates instance of the AddExtension Class
         DropBoxPreDefined DropBoxPreDefined = new DropBoxPreDefined(); //Creates instance of the DropBoxPreDefined class
 
         public Form1()
@@ -23,7 +22,7 @@ namespace File_Extensions_Add_or_Change
         {
             //Select Files Button
             AddExtension.DisableTheButtons();
-            AddExtension.ClearTheScreen(); //Clears all non important screens and empties lists
+            DropBoxPreDefined.ClearTheScreen(); //Clears all non important screens and empties lists
 
             DialogResult dr = openFileDialog1.ShowDialog(); //Opens file Selection box
             
@@ -38,7 +37,7 @@ namespace File_Extensions_Add_or_Change
 
                     string pathName = Path.GetDirectoryName(fileFullPath); //Get only the Directory of the file
 
-                    AddExtension.ThisIsTheFIlePathOfFiles(pathName, fileFullPath, fileNames); //Call the method and pass in the above values
+                   DropBoxPreDefined.ThisIsTheFIlePathOfFiles(pathName, fileFullPath, fileNames); //Call the method and pass in the above values
                     
                     listView1.Items.Add(fileNames); //Display the selected files
                     namesOfFiles.Add(fileNames); //add the files to a List for later use
@@ -55,7 +54,7 @@ namespace File_Extensions_Add_or_Change
             if (radioButton1.Checked)
             {
                 textBox1.Enabled = true;
-                AddExtension.NameOfFIles(namesOfFiles); //Call the Method and pass it the list of file names
+                DropBoxPreDefined.NameOfFIles(namesOfFiles); //Call the Method and pass it the list of file names
                 button2.Enabled = false;
             }
 
@@ -71,25 +70,22 @@ namespace File_Extensions_Add_or_Change
             if (radioButton2.Checked)
             {
                 comboBox1.Enabled = true;
-                AddExtension.NameOfFIles(namesOfFiles); //Call Method and pass it the list of file names
+                DropBoxPreDefined.NameOfFIles(namesOfFiles); //Call Method and pass it the list of file names
                 DropBoxPreDefined.FillComboBox(); //Call method that populates the combo boc
                 button2.Enabled = false;
             }
-
+             
             else
             {
                 comboBox1.Enabled = false;
                 DropBoxPreDefined.ClearComboBox();
-            }
-            
+            }       
         }
-
-       
         private void Enter(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) //Checks if the enter button is pressed after filling in the text box with user input
             {
-                AddExtension.ExtensionAddition(AddExtension.CheckTheString()); //Call 2 methods passing the return value to the next
+                DropBoxPreDefined.ExtensionAddition(DropBoxPreDefined.CheckTheString()); //Call 2 methods passing the return value to the next
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,9 +93,6 @@ namespace File_Extensions_Add_or_Change
             if (comboBox1.SelectedIndex > -1) //Checks if the combobox has a selected value if not do nothing
             {
                 string selectedComboBoxExt = comboBox1.SelectedItem.ToString(); //Puts the selected value to a string value
-                DropBoxPreDefined.CurrentInstanceOfAddExtension(AddExtension); //Calls method and passes the current instance of the AddExtension class so
-                                                                                //not to start with a clean instance of it causing issues
-
                 DropBoxPreDefined.SelectedDropBoxExtension(selectedComboBoxExt); //Calls method and passes the selected item from dropbox
             }
         }
@@ -107,7 +100,7 @@ namespace File_Extensions_Add_or_Change
         {
             //start button
 
-            AddExtension.StartTheChange(); //Calls Method to start changing the file extension
+            DropBoxPreDefined.StartTheChange(); //Calls Method to start changing the file extension
             namesOfFiles.Clear(); //Clears the list of names to be sure no storing of previous files
            
         }
